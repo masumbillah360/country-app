@@ -97,9 +97,9 @@ const displayCountryDetail = country =>{
         <h4 class="fw-bold">Name : ${country.name.common}</h4>
         <p class = "fw-bold">Name : ${country.name.official}</p>
         <p><span>Code : ${country.cca2} <-> Capital : ${country.capital}</span></p>
-        <p><span>Area : ${country.area} \t Currencies : ${getCurrencies.name} ${getCurrencies.symbol}</span></p>
-        <p>Population : ${country.population} Square Km \t Region: ${country.continents[0]}</p>
-        <p>Language : ${Object.values(languages)}  Country-Origin: ${country.continents[0]}</p>
+        <p><span>Area : ${country.area}Square Km \t Currencies : ${getCurrencies.name} ${getCurrencies.symbol}</span></p>
+        <p>Population : ${country.population} \t Region: ${country.continents[0]}</p>
+        <p>Language : ${Object.values(languages)}</p>
 
         </div>
     `
