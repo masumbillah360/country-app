@@ -81,11 +81,11 @@ const loadCountryDetail = (code) => {
 }
 
 const displayCountryDetail = country =>{
-    console.log(country)
-
     const countryDetail = document.getElementById('show-country-container');
     const currencies = country.currencies;
     const getCurrencies = currencies[Object.keys(currencies)[0]];
+    const languages = country.languages;
+    // const lang = languages[Object.keys(...languages)];
     countryDetail.innerHTML = `
         <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">${country.name.common}</h5>
@@ -95,10 +95,12 @@ const displayCountryDetail = country =>{
         <img src="${country.flags.png}">
 
         <h4 class="fw-bold">Name : ${country.name.common}</h4>
-        <h5>Name : ${country.name.official}</h5>
-        <p><span>Code : ${country.cca2} \t Capital : ${country.capital}</span></p>
+        <p class = "fw-bold">Name : ${country.name.official}</p>
+        <p><span>Code : ${country.cca2} <-> Capital : ${country.capital}</span></p>
         <p><span>Area : ${country.area} \t Currencies : ${getCurrencies.name} ${getCurrencies.symbol}</span></p>
-        <p>Population : ${country.population} ${country.continents[0]}</p>
+        <p>Population : ${country.population} Square Km \t Region: ${country.continents[0]}</p>
+        <p>Language : ${Object.values(languages)}  Country-Origin: ${country.continents[0]}</p>
+
         </div>
     `
 }
